@@ -1,7 +1,16 @@
+import Header from "../components/header/Header";
+
 const Home = () => {
-    return(
-        <h1>Home</h1>
-    )
+    return (
+      <section>
+        <Header
+          isMainPage={true}
+          brandName="CINESTAR STUDIO"
+          title="FILM & TV PRODUKTION"
+          description="Vi skaber levende fortællinger, der fanger dit publikum. Fra idé til færdigt produkt leverer vi professionelle film- og tv-løsninger, der gør din historie uforglemmelig."
+        />
+      </section>
+    );
 }
 
 export default Home;
