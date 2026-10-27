@@ -2,6 +2,7 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navigation from "../navigation/Navigation";
+import Footer from "../footer/Footer";
 
 const AppLayout = () => {
   return (
@@ -12,7 +13,7 @@ const AppLayout = () => {
         <Outlet />
         <ScrollRestoration />
       </div>
-      
+      <Footer />
       <ToastContainer
         position="bottom-center"
         autoClose={3000}
