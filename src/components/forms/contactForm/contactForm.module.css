@@ -1,0 +1,41 @@
+.form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+    gap: 20px;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-left: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  font-size: 16px;
+  background-color: transparent;
+  color: #999999;
+}
+
+.form input:focus {
+  border-color: #F07232;
+  outline: none;
+}
+
+.form textarea:focus {
+  border-color: #F07232;
+  outline: none;
+}
+
+.form button:hover {
+  background-color: #f0713281;
+}
+
+/* Valideringsfejl fra yup vises i rødt under feltet. */
+.error {
+  display: block;
+  margin-top: 4px;
+  color: #b3261e;
+  font-size: 14px;
+  text-shadow: none;
+}
+
