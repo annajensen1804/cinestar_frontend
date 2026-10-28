@@ -28,18 +28,21 @@ const Blog = ({
   return (
     <figure className={styles.blogCard}>
       <img src={blog.image} alt={blog.title} />
-      <h3 className={styles.title}>{blog.title}</h3>
-      {showTeaser && <p>{blog.teaser}</p>}
-      {showDescription && <p>{blog.description}</p>}
-      {showDate && (
-        <p className={styles.blogDate}>{formatDate(blog.created)}</p>
+      <div className={styles.blogCardContent}>
+        <h3 className={styles.title}>{blog.title}</h3>
+        {showTeaser && <p>{blog.teaser}</p>}
+        {showDescription && <p>{blog.description}</p>}
+        {showDate && (
+          <p className={styles.blogDate}>{formatDate(blog.created)}</p>
       )}
-      {showButton && (
+        {showButton && (
         <Button
           buttonText="Læs mere"
           onClick={() => navigate(`/blog/${blog._id}`)}
         />
       )}
+      </div>
+      
     </figure>
   );
 };
