@@ -1,8 +1,14 @@
+import { useLoaderData } from "react-router-dom";
 import Awards from "../components/awards/Awards";
+import BlogSection from "../components/blogSection/BlogSection";
 import ContactSection from "../components/contactSection/ContactSection";
 import Header from "../components/header/Header";
 
 const Home = () => {
+  const blogs = useLoaderData();
+
+  const latestblog = blogs?.at(0); // viser den første (= den nyeste) blogindlæg
+
     return (
       <section>
         <Header
@@ -13,6 +19,7 @@ const Home = () => {
         />
         <Awards />
         <ContactSection />
+        <BlogSection blogs={[latestblog]} />
       </section>
     );
 }
