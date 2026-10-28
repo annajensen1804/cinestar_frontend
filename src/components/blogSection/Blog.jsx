@@ -1,6 +1,9 @@
-import styles from './blogSection.module.css'
+import styles from './blogSection.module.css';
+import Button from '../button/Button';
+import { useNavigate } from "react-router-dom";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, showButton }) => {
+  const navigate = useNavigate();
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -22,6 +25,13 @@ const Blog = ({ blog }) => {
         <h3 className={styles.title}>{blog.title}</h3>
         <p>{blog.teaser}</p>
         <p className={styles.blogDate}>{formatDate(blog.created)}</p>
+        
+        {showButton && (
+          <Button
+          buttonText="Læs mere"
+          onClick={() => navigate(`/blog/${blog._id}`)}
+          /> 
+        )}
       </figure>
     );
 }

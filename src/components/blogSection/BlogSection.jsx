@@ -1,5 +1,5 @@
 import styles from "./blogSection.module.css";
-import Blog from "./Blog";
+import BlogList from "./BlogList";
 
 const BlogSection = ({ blogs }) => {  
     
@@ -14,9 +14,7 @@ const BlogSection = ({ blogs }) => {
           spændende projekter og produktioner.
         </p>
 
-        {blogs?.map((blog) => (
-          <Blog key={blog._id} blog={blog} />
-        ))}
+        <BlogList blogs={blogs} />
       </div>
     </section>
   );
