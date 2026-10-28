@@ -12,3 +12,8 @@ const getData = async (path, errorText = "Fejl ved hentning") => {
 export const blogsLoader = async () => {
     return getData("/blogs");
 }
+
+// Blog-detaljer: henter den ENE blogindlæg
+export const blogDetailsLoader = async ({ params }) => {
+  return getData(`/blog/${params.blogId}`, "Blogindlæg ikke fundet");
+};

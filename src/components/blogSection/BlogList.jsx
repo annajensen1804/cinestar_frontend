@@ -5,7 +5,7 @@ const BlogList = ({ blogs }) => {
   return (
     <section className={styles.content}>
       {blogs?.map((blog) => (
-        <Blog key={blog._id} blog={blog} showButton={true} />
+        <Blog key={blog._id} blog={blog} showButton showTeaser showDate/>
       ))}
     </section>
   );
