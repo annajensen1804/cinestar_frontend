@@ -7,15 +7,13 @@ const BlogPage = () => {
     const blogs = useLoaderData();  
     
     return (
-        <section>
-            <Header 
-            title="BLOG ARKIV" />
+      <section>
+        <Header title="BLOG ARKIV" />
 
-            <BlogList blogs={blogs} />
-            <SoMe />
-        </section>
-        
-    )
+        <BlogList blogs={blogs} />
+        <SoMe />
+      </section>
+    );
 }
 
 export default BlogPage;
