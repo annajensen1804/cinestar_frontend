@@ -17,7 +17,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
 
     @media(min-width: 1440px) {
