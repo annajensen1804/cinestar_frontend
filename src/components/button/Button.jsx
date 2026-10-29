@@ -3,11 +3,12 @@ import styles from './button.module.css'
 const Button = ({
   buttonText, 
   type = "button",
-  onClick
+  onClick,
+  variant = "default"
 }) => {
   return (
     <button
-      className={styles.button}
+      className={`${styles.button} ${styles[variant] || ""}`}
       onClick={onClick}
       type={type}
     >

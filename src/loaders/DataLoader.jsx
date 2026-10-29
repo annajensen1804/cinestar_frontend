@@ -8,7 +8,7 @@ const getData = async (path, errorText = "Fejl ved hentning") => {
   return json.data;
 };
 
-// Henter alle blogindlæg og viser kun det sidste på forsiden
+// Henter alle blogindlæg
 export const blogsLoader = async () => {
     return getData("/blogs");
 }
@@ -16,4 +16,17 @@ export const blogsLoader = async () => {
 // Blog-detaljer: henter den ENE blogindlæg
 export const blogDetailsLoader = async ({ params }) => {
   return getData(`/blog/${params.blogId}`, "Blogindlæg ikke fundet");
+};
+
+// Henter blogindlæg, beskeder og udtalelser til Backoffice
+export const backofficeLoader = async () => {
+  const [blogs, messages, reviews] = await Promise.all(
+    [
+      getData("/blogs"),
+      getData("/messages"),
+      getData("/reviews"),
+    ],
+  );
+
+    return { blogs, messages, reviews };
 };
