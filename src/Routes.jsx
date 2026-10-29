@@ -1,10 +1,11 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
-import { blogDetailsLoader, blogsLoader } from "./loaders/DataLoader";
+import { backofficeLoader, blogDetailsLoader, blogsLoader } from "./loaders/DataLoader";
 import AppLayout from "./components/layouts/AppLayout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import BlogPage from "./pages/BlogPage";
 import BlogDetails from "./pages/BlogDetails";
+import Backoffice from "./pages/backoffice/Backoffice";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,9 @@ const routes = createBrowserRouter(
 
         <Route path="contact" element={<Contact />} />
       </Route>
+
+      <Route path="backoffice" element={<Backoffice />} loader={backofficeLoader} />
+
     </Route>,
   ),
 );
