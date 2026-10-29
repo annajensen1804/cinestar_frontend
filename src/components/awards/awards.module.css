@@ -15,7 +15,7 @@
     object-fit: contain;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .awardsContainer {
     background-color: transparent; 
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);

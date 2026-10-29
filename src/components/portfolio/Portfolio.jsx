@@ -50,7 +50,7 @@ const Portfolio = () => {
                 slideShadows: false,
               },
             },
-            1440: {
+            768: {
               slidesPerView: "auto",
               coverflowEffect: {
                 rotate: 0,

@@ -3,10 +3,9 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
-    padding: 2rem;
     background: linear-gradient(rgba(0, 0, 0, 0.8)), url("../../assets/studie2.jpg") no-repeat center;
     background-size: cover;
-    padding-bottom: 3rem;
+    padding: 40px 20px;
 
     @media (min-width: 1440px) {
         text-align: center;

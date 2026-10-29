@@ -5,7 +5,7 @@
     justify-content: flex-start;
     gap: 20px;
     
-    @media(min-width: 1440px) {
+    @media(min-width: 768px) {
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -65,10 +65,10 @@
   background: rgba(242, 157, 56, 1);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .sliderContainer {
     width: 100%;
-    max-width: 1440px;
+    max-width: 768px;
     padding: 40px 0;
   }
 
