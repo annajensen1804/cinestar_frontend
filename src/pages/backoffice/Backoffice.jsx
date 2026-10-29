@@ -38,6 +38,7 @@ const Backoffice = () => {
 
   return (
     <article className={styles.backoffice}>
+      <a href="/">← Tilbage til forsiden</a>
       <h1>Backoffice</h1>
       <h2>Blogs</h2>
       <BlogsSec
