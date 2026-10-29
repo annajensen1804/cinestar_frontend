@@ -4,19 +4,20 @@ import Hamburger from "hamburger-react";
 import { toast } from "react-toastify";
 import logo from "../../assets/logo.png";
 import styles from "./navigation.module.css";
+import { useAuthContext } from "../../context/useAuthContext";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  /* const { isLoggedIn, logout } = useAuthContext(); */
+  const { isLoggedIn, logout } = useAuthContext();
 
   const closeMenu = () => setIsOpen(false);
 
-  /* const handleLogout = () => {
+  const handleLogout = () => {
     logout();
     closeMenu();
     toast.success("Du er nu logget ud");
     navigate("/");
-  }; */
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -60,11 +61,11 @@ const Navigation = () => {
           </NavLink>
         </li>
 
-        {/* {isLoggedIn ? (
+        {isLoggedIn ? (
           <>
             <li>
               <NavLink onClick={closeMenu} to="/backoffice">
-                Backoffice
+                BACKOFFICE
               </NavLink>
             </li>
 
@@ -80,7 +81,7 @@ const Navigation = () => {
               LOGIN
             </NavLink>
           </li>
-        )} */}
+        )}
       </ul>
     </nav>
   );

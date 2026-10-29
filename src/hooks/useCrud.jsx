@@ -1,4 +1,4 @@
-/* import { useAuthContext} from "../context/useAuthContext"; */
+import { useAuthContext} from "../context/useAuthContext";
 import { toast } from "react-toastify";
 import { useRevalidator } from "react-router";
 import { serverPath } from "../settings";
@@ -8,15 +8,15 @@ const useCrud = () => {
   const revalidator = useRevalidator();
   
 
-  /* const { token } = useAuthContext();
-  const authHeader = token ? { Authorization: `Bearer ${token}` } : {}; */
+  const { token } = useAuthContext();
+  const authHeader = token ? { Authorization: `Bearer ${token}` } : {};
 
   const create = async (endpoint, formData) => {
     try {
       const response = await fetch(`${serverPath}/${endpoint}`, {
       method: "POST",
       body: formData,
-      /* headers: authHeader, */
+      headers: authHeader,
     });
     
     if (!response.ok) {
@@ -36,7 +36,7 @@ const remove = async (endpoint, id) => {
   try {
     const res = await fetch(`${serverPath}/${endpoint}/${id}`, {
       method: "DELETE",
-      /* headers: authHeader, */
+      headers: authHeader,
     });
     
     if (!res.ok) {
@@ -57,7 +57,7 @@ const update = async (endpoint, formData) => {
   try {
     const res = await fetch(`${serverPath}/${endpoint}`, {
       method: "PUT",
-      /* headers: authHeader, */
+      headers: authHeader,
       body: formData,
     });
 

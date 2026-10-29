@@ -7,7 +7,8 @@
 
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   width: 100%;
   padding: 0.5em;
@@ -104,6 +105,8 @@
   .nav-links {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     position: static;
     width: auto;
     background-color: transparent;
@@ -111,8 +114,12 @@
     padding-top: 10px;
   }
 
+  .nav-links li {
+    padding: 1rem;
+  }
+
   .nav-links li a {
-      margin: 0 1rem;
+      margin: 1rem;
       color: white;
       font-weight: 700;
     }
