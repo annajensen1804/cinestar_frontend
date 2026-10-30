@@ -6,9 +6,10 @@ import Header from "../components/header/Header";
 import Portfolio from "../components/portfolio/Portfolio";
 import SoMe from "../components/some/SoMe";
 import Services from "../components/services/Services";
+import Reviews from "../components/reviews/Reviews";
 
 const Home = () => {
-  const blogs = useLoaderData();
+  const { blogs } = useLoaderData();
 
   const latestblog = blogs?.at(0); // viser den første (= den nyeste) blogindlæg
 
@@ -23,6 +24,7 @@ const Home = () => {
         <Awards />
         <Portfolio />
         <Services />
+        <Reviews />
         <ContactSection />
         <BlogSection blogs={[latestblog]} />
         <SoMe />

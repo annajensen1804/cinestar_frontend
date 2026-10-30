@@ -25,7 +25,7 @@ const routes = createBrowserRouter(
 
         <Route
           path="blog"
-          lement={<BlogPage />}
+          element={<BlogPage />}
           loader={blogsLoader}
           errorElement={<ErrorElement />}
         />
