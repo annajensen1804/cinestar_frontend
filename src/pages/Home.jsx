@@ -5,6 +5,7 @@ import ContactSection from "../components/contactSection/ContactSection";
 import Header from "../components/header/Header";
 import Portfolio from "../components/portfolio/Portfolio";
 import SoMe from "../components/some/SoMe";
+import Services from "../components/services/Services";
 
 const Home = () => {
   const blogs = useLoaderData();
@@ -21,6 +22,7 @@ const Home = () => {
         />
         <Awards />
         <Portfolio />
+        <Services />
         <ContactSection />
         <BlogSection blogs={[latestblog]} />
         <SoMe />
