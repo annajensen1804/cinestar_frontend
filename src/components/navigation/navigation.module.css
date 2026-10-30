@@ -93,7 +93,7 @@
     color: #F07232;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .burger-menu {
     display: none;
   }
@@ -115,11 +115,11 @@
   }
 
   .nav-links li {
-    padding: 1rem;
+    padding: 0.2rem;
   }
 
   .nav-links li a {
-      margin: 1rem;
+      margin: 0 1rem;
       color: white;
       font-weight: 700;
     }

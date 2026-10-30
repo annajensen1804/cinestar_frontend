@@ -1,22 +1,29 @@
 .backoffice {
   padding: 20px;
-  background-color: #fff;
+  background-color: #393939;
+  color: #d4d4d4;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
   align-items: center;
   text-align: center;
+  min-height: 100vh;
 }  
 
 .backoffice a {
-  color: gray;
+  color: #a0a0a0;
   font-size: 24px;
   font-weight: 600;
   font-family: Quicksand;
   position: absolute;
   top: 10px;
   left: 10px;
+  transition: color 0.2s ease;
+}
+
+.backoffice a:hover {
+  color: #F07232;
 }
   
 .backoffice img {
@@ -28,7 +35,7 @@
 }
 
 .backoffice h1, h2 {
-  color: #000;
+  color: #e0e0e0; 
   font-family: Quicksand;
 }
 
@@ -37,16 +44,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 50px;
-
-  figure {
-    display: flex;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
 }
 
 table {
@@ -56,6 +53,7 @@ table {
   font-size: 14px;
   font-family: Arial, sans-serif;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #414141;
 }
 
 li {
@@ -66,22 +64,22 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #f07132ec;
+  border-bottom: 1px solid #333;
 }
 
 thead th {
-  background-color: #f07132ec;
-  color: #ffffff;
+  background-color: #f07132c4;
+  color: #c8c8c8;
   text-transform: uppercase;
-
+  border-bottom: 2px solid #b84f1d;
 }
 
 tbody tr:hover {
-  background-color: #f1f1f1;
+  background-color: #4a4a4a;
 }
 
 td {
-  color: #333;
+  color: #e0e0e0;
 }
 
 .table-container {

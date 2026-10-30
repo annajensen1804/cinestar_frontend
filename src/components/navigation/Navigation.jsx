@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import { toast } from "react-toastify";
 import logo from "../../assets/logo.png";
@@ -9,6 +9,7 @@ import { useAuthContext } from "../../context/useAuthContext";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isLoggedIn, logout } = useAuthContext();
+  const navigate = useNavigate();
 
   const closeMenu = () => setIsOpen(false);
 

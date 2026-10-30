@@ -2,7 +2,15 @@ import { serverPath } from "../settings";
 
 // Lille hjælper, så vi ikke gentager fetch + fejltjek + udpakning overalt.
 const getData = async (path, errorText = "Fejl ved hentning") => {
-  const res = await fetch(`${serverPath}${path}`);
+
+  const token = localStorage.getItem("token");
+  const headers = {};
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+
+  const res = await fetch(`${serverPath}${path}`, { headers });
+  
   if (!res.ok) throw new Response(errorText, { status: res.status });
   const json = await res.json();
   return json.data;
