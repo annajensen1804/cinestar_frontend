@@ -3,6 +3,7 @@ import { serverPath } from "../settings";
 // Lille hjælper, så vi ikke gentager fetch + fejltjek + udpakning overalt.
 const getData = async (path, errorText = "Fejl ved hentning") => {
 
+  // Henter token fra local storage og sender den i headers
   const token = localStorage.getItem("token");
   const headers = {};
   if (token) {

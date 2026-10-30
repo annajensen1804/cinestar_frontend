@@ -61,19 +61,16 @@ const update = async (endpoint, formData) => {
       body: formData,
     });
 
-     console.log("Status fra server:", res.status);
+    console.log("Status fra server:", res.status);
 
-    if(!res.ok) {
-      throw new Error("Kunne ikke opdatere")
+    if (!res.ok) {
+      throw new Error("Kunne ikke opdatere");
     }
 
-    const text = await res.text();
-    const data = text ? JSON.parse(text) : {};
-
-    toast.success("Opdateret!")
+    toast.success("Opdateret!");
     await revalidator.revalidate();
-    return data;
-
+    return await res.json();
+    
   } catch (error) {
     console.error("Error in update", error)
     toast.error("Kunne ikke opdatere");
