@@ -8,10 +8,15 @@ const getData = async (path, errorText = "Fejl ved hentning") => {
   return json.data;
 };
 
-// Henter alle blogindlæg
+// Henter alle blogindlæg og udtalelser
 export const blogsLoader = async () => {
-    return getData("/blogs");
-}
+  const [blogs, reviews] = await Promise.all([
+    getData("/blogs"),
+    getData("/reviews"),
+  ]);
+
+  return { blogs, reviews };
+};
 
 // Blog-detaljer: henter den ENE blogindlæg
 export const blogDetailsLoader = async ({ params }) => {

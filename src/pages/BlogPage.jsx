@@ -4,7 +4,7 @@ import BlogList from "../components/blogSection/BlogList";
 import SoMe from "../components/some/SoMe";
 
 const BlogPage = () => {
-    const blogs = useLoaderData();  
+    const { blogs } = useLoaderData();  
     
     return (
       <section>

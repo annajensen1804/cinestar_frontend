@@ -24,11 +24,9 @@ const Portfolio = () => {
 
   return (
     <section className={styles.sectionsContainer}>
-        <div className={styles.intro}>
-            <p className="kicker">Portfolio</p>
-            <h2 className="title">UDVALGTE PROJEKTER</h2>
-        </div>
-      
+        <p className="kicker">Portfolio</p>
+        <h2 className="title">UDVALGTE PROJEKTER</h2>
+        
       <div className={styles.sliderContainer}>
         <Swiper
           modules={[Navigation, Pagination, EffectCoverflow]}
@@ -72,6 +70,16 @@ const Portfolio = () => {
           ))}
         </Swiper>
       </div>
+      <p>
+        Her præsenterer vi et udvalg af de produktioner, vi er stolte af at have
+        skabt.
+      </p>
+      <p>
+        Hvert projekt fortæller sin unikke historie og illustrerer vores
+        ambition om at levere høj kvalitet, originalitet og visuel
+        gennemslagskraft.
+      </p>
+      <p>Gå på opdagelse, og lad dig inspirere af vores arbejde.</p>
     </section>
   );
 };
