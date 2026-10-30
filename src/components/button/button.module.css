@@ -23,19 +23,36 @@
     }
 }
 
+.update {
+    border: 2px solid #F07232;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+}
+
+.update:hover {
+    background-color: #F07232;
+    .buttonText {
+        color: #c8c8c8;
+    }
+}
+
 .delete {
-    background-color: rgba(255, 0, 0, 0.9);
+    background-color:#573131;
+    border: 2px solid #da3a3a;
     width: 150px;
     height: 50px;
     margin: 10px;
     .buttonText {
-        color: #fff;
+        color: #da3a3a;
     }
 }
 
-.update {
-    background-color: rgba(255, 166, 0, 0.4);
-    width: 150px;
-    height: 50px;
-    margin: 10px;
+.delete:hover {
+    background-color: #da3a3a;
+    border: none;
+    
+    .buttonText {
+    color: #c8c8c8;
+}
 }
