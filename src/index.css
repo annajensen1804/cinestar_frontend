@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5 {
   font-style: bold;
   font-size: 20px;
   text-transform: uppercase;
-    @media(min-width: 768px) {
+    @media(min-width: 1024px) {
       font-size: 40px;
     }
 }
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
   font-style: bold;
   font-size: 30px;  
-   @media(min-width: 768px) {
+   @media(min-width: 1024px) {
       font-size: 36px;
     }
 }
@@ -56,7 +56,7 @@ p {
   font-family: "Quicksand", sans-serif;
   color: white;
   font-size: 20px;
-    @media(min-width: 768px) {
+    @media(min-width: 1024px) {
       font-size: 30px;
     }
 }
