@@ -1,16 +1,56 @@
-# React + Vite
+# Cinestar Studio – Final Exam Project (Fagprøve)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive web application and custom backoffice dashboard developed as the final exam project (*Fagprøve*) for the Web Developer education at **Media College Denmark** (November 2026).
 
-Currently, two official plugins are available:
+The project is built for **Cinestar Studio**, an innovative film and movie production company, allowing them to showcase their portfolio, services, and manage a professional tech and industry blog.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Purpose & Core Features
 
-## React Compiler
+The solution is developed **mobile-first** (optimized from 390px up to 1440px desktop) with a heavy focus on intuitive UI/UX, robust error handling, and performance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend (Public Site)
+*   **Dynamic Landing Page:** Features active slider components, and modern gradient layouts matching client specifications.
+*   **Interactive Features:** Fully validated contact forms and newsletter subscription components.
+*   **Blog Architecture:** Comprehensive list-view with teaser-cards leading to dedicated dynamic detail pages (`/blog/:id`).
 
-## Expanding the Oxlint configuration
+### Backoffice (Admin Dashboard)
+*   **Full CRUD Functionality:** Secure interface for administrators to Create, Read, Update, and Delete blog posts (managing titles, images, teasers, and descriptions).
+*   **Session Management & Security:** Implemented a secure `ProtectedRoute` mechanism using browser `localStorage` to persist authentication tokens and guard administrative routes against unauthorized access.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech Stack & Methodology
+
+*   **Frontend Framework:** React (with modern JavaScript ES6+)
+*   **Styling:** Semantically correct HTML5, CSS3 Modules for components' styling.
+*   **Data Handling:** Asynchronous REST API integration with a local MongoDB/Express backend handling `GET`, `POST`, `PUT`, and `DELETE` requests, including JWT-based user authentication.
+*   **UX/UI Standards:** Built with strong adherence to **web accessibility (WCAG)**, solid contrast levels, and intuitive interactive validation feedback.
+*   **Development Workflow:** Methodical task estimation, git version control, and AI-assisted code profiling/reviews for optimized rendering speed.
+
+
+## Development & Local Setup
+
+*Note: This repository contains the frontend application. The backend API and MongoDB database run locally and are not public.*
+
+### 1. Installation
+Clone the repository:
+```bash
+git clone https://github.com
+cd cinestar_frontend
+```
+
+Install the required dependencies:
+```bash
+npm install
+```
+
+### 2. Environment Configuration
+The frontend connects to the local API via environment variables. Create a `.env.local` file in the root directory:
+```env
+REACT_APP_API_URL=http://localhost:5000
+USE_JWT=true
+```
+
+### 3. Running the App
+To start the development server locally:
+```bash
+npm start
+```
