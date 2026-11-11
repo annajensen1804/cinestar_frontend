@@ -42,15 +42,16 @@ Install the required dependencies:
 npm install
 ```
 
-### 2. Environment Configuration
-The frontend connects to the local API via environment variables. Create a `.env.local` file in the root directory:
-```env
-REACT_APP_API_URL=http://localhost:5000
-USE_JWT=true
+### 2. Configuration
+The backend API connection is managed centrally in the configuration file (`src/settings.js`). By default, it is configured to point to the local backend port:
+```javascript
+export const serverPath = `http://localhost:3042`;
+export const authmode = false; 
 ```
 
 ### 3. Running the App
-To start the development server locally:
+To start the Vite development server locally:
 ```bash
-npm start
+npm run dev
 ```
+The application will be accessible at `http://localhost:5173` (or the port specified by Vite).
